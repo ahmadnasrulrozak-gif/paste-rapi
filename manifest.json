@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Paste Rapi",
+  "version": "0.3.1",
+  "description": "Ketikkan teks huruf per huruf ke kolom pilihan, dengan pratinjau dan pengaturan kecepatan.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "clipboardRead",
+    "clipboardWrite"
+  ],
+  "action": {
+    "default_title": "Paste Rapi",
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="id"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paste Rapi</title><link rel="stylesheet" href="popup.css">
+</head><body><main class="app">
+<header class="topbar"><div class="mark" aria-hidden="true">P</div><div><p class="eyebrow">ASISTEN PENGETIKAN</p><h1>Paste Rapi</h1></div><span class="version">v0.3.1</span></header>
+<p class="intro">Klik kolom tujuan di halaman, buka ekstensi, lalu masukkan teks dan mulai mengetik.</p>
+<div class="target" id="target" role="status">Memeriksa kolom tujuan…</div>
+<div class="field-heading"><label for="source">Teks Anda</label><button class="text-button" id="read-clipboard" type="button">Ambil clipboard</button></div>
+<textarea id="source" placeholder="Tempel teks di sini…" spellcheck="false"></textarea>
+<div class="source-actions"><span id="source-count">0 karakter</span><button class="text-button muted" id="clear" type="button">Kosongkan</button></div>
+<section class="speed-control"><div class="field-heading"><label for="speed">Kecepatan</label><output id="speed-value" for="speed">Hampir instan</output></div>
+<input id="speed" type="range" min="0" max="200" step="5" value="0">
+<div class="range-labels"><span>Hampir instan</span><span id="estimate">—</span><span>Santai</span></div></section>
+<details><summary>Rapikan teks <span>Opsional</span></summary><section class="options" aria-label="Opsi perapian">
+<label class="option"><input id="spaces" type="checkbox"><span><b>Bersihkan spasi di ujung baris</b><small>Indentasi di awal baris tetap terjaga</small></span></label>
+<label class="option"><input id="paragraphs" type="checkbox"><span><b>Rapikan paragraf</b><small>Batasi baris kosong berlebih</small></span></label>
+<label class="option"><input id="removeBlankLines" type="checkbox"><span><b>Hapus baris kosong</b><small>Hilangkan jarak kosong antarparagraf dan poin</small></span></label>
+<label class="option"><input id="lists" type="checkbox"><span><b>Seragamkan bullet</b><small>Ubah simbol daftar menjadi •</small></span></label>
+<label class="option"><input id="quotes" type="checkbox"><span><b>Tanda kutip tipografis</b><small>Gunakan kutip lengkung</small></span></label>
+</section></details>
+<div class="field-heading preview-heading"><label for="result">Pratinjau teks yang akan diketik</label><button class="text-button" id="copy" type="button" disabled>Salin</button></div>
+<textarea id="result" readonly placeholder="Pratinjau muncul di sini…"></textarea>
+<div id="running" class="running" hidden><progress id="progress" max="100" value="0"></progress><span id="progress-text"></span></div>
+<div class="buttons"><button class="stop-button" id="stop" type="button" disabled>Berhenti</button><button class="start-button" id="start" type="button" disabled>Mulai mengetik <span aria-hidden="true">→</span></button></div>
+<p id="message" role="status" aria-live="polite">Teks diproses di perangkat ini.</p>
+<p class="note">Tekan Esc di halaman untuk berhenti. Draf tersimpan sementara sampai browser ditutup.</p>
+</main><script src="format.js"></script><script src="popup.js"></script></body></html>

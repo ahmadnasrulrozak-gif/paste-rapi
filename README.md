@@ -1,4 +1,4 @@
-# Paste Rapi v0.3.1
+# Paste Rapi v0.3.1 (Fuck Edunex)
 
 Ekstensi Chrome Manifest V3 untuk memasukkan teks satu karakter demi satu ke kolom pilihan pengguna. Ini implementasi sendiri, bukan salinan kode atau merek Paste Anyway.
 
